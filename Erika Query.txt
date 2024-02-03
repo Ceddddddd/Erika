@@ -1,0 +1,73 @@
+create database erika
+
+CREATE TABLE Positions (
+    position_id INT PRIMARY KEY,
+    position_name VARCHAR(100)
+);
+CREATE TABLE Personnel (
+    personnel_id INT PRIMARY KEY,
+    position_id INT,
+    personnel_name VARCHAR(100),
+    salary DECIMAL(10, 2),
+    contact_number VARCHAR(20),
+    FOREIGN KEY (position_id) REFERENCES Positions(position_id)
+);
+CREATE TABLE Transactions (
+    transaction_id INT PRIMARY KEY,
+    personnel_id INT,
+    transaction_date DATE,
+    amount DECIMAL(10, 2),
+    description VARCHAR(255),
+    FOREIGN KEY (personnel_id) REFERENCES Personnel(personnel_id)
+);
+
+CREATE TABLE DeductionRecords (
+    deduction_id INT PRIMARY KEY,
+    personnel_id INT,
+    deduction_date DATE,
+    deduction_amount DECIMAL(10, 2),
+    deduction_reason VARCHAR(255),
+    FOREIGN KEY (personnel_id) REFERENCES Personnel(personnel_id)
+);
+
+
+INSERT INTO Positions (position_id, position_name)
+VALUES
+    (1, 'Barangay Captain'),
+    (2, 'Kagawad'),
+    (3, 'SK Chairperson'),
+    (4, 'Barangay Tanod'),
+    (5, 'Barangay Health Worker');
+
+
+INSERT INTO Personnel (personnel_id, position_id, personnel_name, salary, contact_number)
+VALUES
+    (0, 1, 'Asher Mabalatan', 12740.00, '09123456789'),
+    (1, 2, 'John Doe', 5740.00, '09234567890'),
+    (2, 2, 'Jane Smith', 5740.00, '09345678901'),
+    (3, 2, 'Michael Johnson', 5740.00, '09456789012'),
+    (4, 2, 'Sarah Williams', 5740.00, '09567890123');
+
+INSERT INTO Transactions (transaction_id, personnel_id, transaction_date, amount, description)
+VALUES
+    (1, 0, '2024-01-30', 1000.00, 'Supplies purchase'),
+    (2, 1, '2024-01-30', 200.00, 'Miscellaneous expense'),
+    (3, 2, '2024-01-29', 150.00, 'Travel reimbursement');
+
+CREATE TABLE DeductionRecords (
+    deduction_id INT PRIMARY KEY,
+    personnel_id INT,
+    deduction_date DATE,
+    deduction_amount DECIMAL(10, 2),
+    deduction_reason VARCHAR(255),
+    FOREIGN KEY (personnel_id) REFERENCES Personnel(personnel_id)
+);
+
+INSERT INTO DeductionRecords (deduction_id, personnel_id, deduction_date, deduction_amount, deduction_reason)
+VALUES
+    (1, 0, '2024-01-30', 500.00, 'Health insurance'),
+    (2, 0, '2024-01-30', 200.00, 'Social Security'),
+    (3, 1, '2024-01-30', 50.00, 'Uniform repair'),
+    (4, 2, '2024-01-29', 100.00, 'Equipment purchase');
+
+
