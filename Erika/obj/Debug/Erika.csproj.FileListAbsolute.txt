@@ -1,0 +1,12 @@
+C:\Users\63912\source\repos\Erika\bin\Debug\Erika.exe.config
+C:\Users\63912\source\repos\Erika\bin\Debug\Erika.exe
+C:\Users\63912\source\repos\Erika\bin\Debug\Erika.pdb
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.csproj.AssemblyReference.cache
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.csproj.SuggestedBindingRedirects.cache
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.Form1.resources
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.Properties.Resources.resources
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.csproj.GenerateResource.cache
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.csproj.CoreCompileInputs.cache
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.exe
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.pdb
+C:\Users\63912\source\repos\Erika\obj\Debug\Erika.Form2.resources
